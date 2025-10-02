@@ -733,3 +733,13 @@ footer .footer-content p a:hover {
     display: flex;
     animation: slideDown 0.3s ease forwards;
 }
+
+/* Fix specific staff images that aren’t fully visible */
+.workers .worker img[alt="Kawala Trust"],
+.workers .worker img[alt="Nakabiri Gloria Vanessa"] {
+    object-fit: cover;
+    /* fills the box nicely */
+    object-position: top center;
+    /* keeps faces visible */
+    border-radius: var(--radius);
+}
