@@ -112,6 +112,8 @@ function checkout() {
 function toggleMenu() {
     const nav = document.querySelector("header nav");
     if (nav) nav.classList.toggle("active");
+    const burger = document.querySelector(".hamburger");
+    if (burger) burger.classList.toggle("active");
 }
 
 // ========================

@@ -183,8 +183,6 @@ header {
 }
 
 /* Images */
-
-/* CEO image */
 .ceo img {
     width: 300px;
     height: 300px;
@@ -194,7 +192,6 @@ header {
     margin: 0 auto 16px auto;
 }
 
-/* Dish & non-customer chefs */
 .dish-img,
 .chef img:not(.ceo) {
     width: 230px;
@@ -205,12 +202,10 @@ header {
     margin: 0 auto 12px auto;
 }
 
-/* Customer images (workers, testimonials, delivery) */
 .workers .worker img,
 .testimonials .testimonial img,
 .delivery img {
     width: 350px;
-    /* bigger than all others */
     height: 350px;
     object-fit: contain;
     border-radius: var(--radius);
@@ -219,7 +214,6 @@ header {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effect */
 .item:hover .dish-img,
 .chef img:hover,
 .workers .worker img:hover,
@@ -402,6 +396,37 @@ footer .footer-content p a {
 
 footer .footer-content p a:hover {
     color: var(--accent-yellow);
+}
+
+/* Shake animation for order buttons */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-4px);
+    }
+
+    40% {
+        transform: translateX(4px);
+    }
+
+    60% {
+        transform: translateX(-4px);
+    }
+
+    80% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake {
+    animation: shake 0.6s;
 }
 
 /* Responsive */
