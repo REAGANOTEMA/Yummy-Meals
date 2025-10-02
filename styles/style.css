@@ -500,3 +500,236 @@ footer .footer-content p a:hover {
         height: 200px;
     }
 }
+
+/* Mobile Hamburger Menu Fixes */
+@media (max-width: 900px) {
+
+    /* Hamburger button visible */
+    .hamburger {
+        display: block;
+        z-index: 101;
+        /* Ensure it’s on top */
+    }
+
+    /* Nav links hidden by default */
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #fff;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        display: none;
+        gap: 12px;
+        width: 200px;
+    }
+
+    /* Show nav when active */
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Optional: Adjust hero text and images for smaller screens */
+@media (max-width: 600px) {
+    .hero-text {
+        font-size: 20px;
+        max-width: 90%;
+    }
+
+    .dish-img,
+    .chef img:not(.ceo) {
+        width: 140px;
+        height: 140px;
+    }
+
+    .workers .worker img,
+    .testimonials .testimonial img,
+    .delivery img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* About Section Professional Layout */
+.about {
+    background: #fff5f2;
+    padding: 40px 0;
+}
+
+.about h2 {
+    text-align: center;
+    color: var(--primary-red);
+    margin-bottom: 24px;
+    font-size: 28px;
+}
+
+.about .ceo,
+.about .chef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.about .ceo img,
+.about .chef img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about .ceo img:hover,
+.about .chef img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Workers Team */
+.workers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.workers .worker {
+    max-width: 280px;
+    text-align: center;
+}
+
+.workers .worker img {
+    width: 100%;
+    height: 280px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.workers .worker img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.testimonials .testimonial {
+    max-width: 350px;
+    text-align: center;
+}
+
+.testimonials .testimonial img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials .testimonial p {
+    font-style: italic;
+}
+
+/* Delivery */
+.delivery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.delivery img {
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.delivery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments for About Section */
+@media (max-width: 900px) {
+
+    .workers,
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .workers .worker,
+    .testimonials .testimonial {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about .ceo img,
+    .about .chef img,
+    .delivery img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .workers .worker img {
+        height: 220px;
+    }
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    gap: 12px;
+}
+
+.nav-links.active {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+}

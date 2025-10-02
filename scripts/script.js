@@ -146,3 +146,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".hamburger");
     if (burger) burger.addEventListener("click", toggleMenu);
 });
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+
+    // Toggle icon
+    if (navLinks.classList.contains('active')) {
+        hamburgerIcon.textContent = '✖'; // X when open
+    } else {
+        hamburgerIcon.textContent = '☰'; // Hamburger when closed
+    }
+});
+
+// Optional: close menu when a link is clicked
+document.querySelectorAll('.nav-links li a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburgerIcon.textContent = '☰';
+    });
+});
