@@ -1,0 +1,477 @@
+:root {
+    --primary-red: #A80F15;
+    --accent-yellow: #FFC246;
+    --dark: #2B2B2B;
+    --muted: #fdf6f4;
+    --radius: 16px;
+    --max-width: 1200px;
+    font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--muted);
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 18px;
+}
+
+/* Header */
+header {
+    padding: 16px 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    padding: 6px 10px;
+    transition: color 0.3s, background 0.3s;
+    border-radius: 8px;
+}
+
+.nav-links li a:hover {
+    background: var(--primary-red);
+    color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-slide.active {
+    display: block;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 3px 3px 14px rgba(0, 0, 0, 0.7);
+    max-width: 90%;
+    line-height: 1.3;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Section */
+.menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    margin: 32px auto;
+    max-width: var(--max-width);
+}
+
+.menu-list {
+    background: #fff5f2;
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.category {
+    margin-bottom: 24px;
+}
+
+.category h3 {
+    color: var(--primary-red);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px;
+    border-radius: 12px;
+    transition: background 0.2s, transform 0.2s;
+    margin-bottom: 8px;
+}
+
+.item:hover {
+    background: rgba(255, 194, 70, 0.1);
+    transform: scale(1.01);
+}
+
+/* Images */
+
+/* CEO image */
+.ceo img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 16px auto;
+}
+
+/* Dish & non-customer chefs */
+.dish-img,
+.chef img:not(.ceo) {
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
+    border-radius: var(--radius);
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+/* Customer images (workers, testimonials, delivery) */
+.workers .worker img,
+.testimonials .testimonial img,
+.delivery img {
+    width: 350px;
+    /* bigger than all others */
+    height: 350px;
+    object-fit: contain;
+    border-radius: var(--radius);
+    display: block;
+    margin: 0 auto 16px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.item:hover .dish-img,
+.chef img:hover,
+.workers .worker img:hover,
+.testimonials .testimonial img:hover,
+.delivery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Buttons */
+.item button,
+.btn {
+    background: linear-gradient(45deg, var(--primary-red), var(--accent-yellow));
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item button:hover,
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Panel */
+.checkout {
+    background: #fff5f2;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+}
+
+.checkout h3 {
+    color: var(--primary-red);
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.phone-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.pay-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.network {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.network.active {
+    border-color: var(--primary-red);
+    background: rgba(168, 15, 21, 0.1);
+}
+
+/* Workers */
+.workers {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Testimonials */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+/* Delivery */
+.delivery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    padding: 16px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Map */
+#map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-red);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+}
+
+footer .footer-content {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+footer .footer-content .socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer .footer-content .socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    color: var(--primary-red);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+footer .footer-content .socials a:hover {
+    background: var(--accent-yellow);
+    color: var(--primary-red);
+    transform: scale(1.1);
+}
+
+footer .footer-content p a {
+    color: #fff;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+footer .footer-content p a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #fff;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        gap: 12px;
+    }
+
+    nav.active .nav-links {
+        display: flex;
+    }
+
+    .hero-text {
+        font-size: 28px;
+    }
+
+    .dish-img,
+    .chef img:not(.ceo) {
+        width: 180px;
+        height: 180px;
+    }
+
+    .workers .worker img,
+    .testimonials .testimonial img,
+    .delivery img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .workers,
+    .testimonials,
+    .delivery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text {
+        font-size: 20px;
+        max-width: 90%;
+    }
+
+    .dish-img,
+    .chef img:not(.ceo) {
+        width: 140px;
+        height: 140px;
+    }
+
+    .workers .worker img,
+    .testimonials .testimonial img,
+    .delivery img {
+        width: 200px;
+        height: 200px;
+    }
+}
