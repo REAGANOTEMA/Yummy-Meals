@@ -621,3 +621,67 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(currentIndex);
     }, 5000);
 });
+// ========================
+// ⭐ HERO IMAGE CAROUSEL ⭐
+// Smooth fade & fully mobile-friendly
+// ========================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".hero-slide");
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            slide.style.opacity = "0";
+            slide.style.transition = "opacity 1s ease-in-out";
+        });
+
+        slides[index].classList.add("active");
+        slides[index].style.opacity = "1";
+    }
+
+    // Show first slide immediately
+    showSlide(currentIndex);
+
+    // Auto-change slide every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }, 5000);
+
+    // Optional: Add arrow navigation (if needed)
+    const leftArrow = document.querySelector(".hero-arrow.left");
+    const rightArrow = document.querySelector(".hero-arrow.right");
+
+    if (leftArrow && rightArrow) {
+        leftArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        rightArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+    }
+
+    // Optional: Add dot navigation
+    const dots = document.querySelectorAll(".hero-dot");
+    if (dots.length) {
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                currentIndex = i;
+                showSlide(currentIndex);
+            });
+        });
+
+        // Update active dot each time slide changes
+        setInterval(() => {
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[currentIndex]?.classList.add("active");
+        }, 100); // small interval to sync
+    }
+});

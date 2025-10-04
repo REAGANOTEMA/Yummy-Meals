@@ -994,3 +994,79 @@ footer .footer-content .socials a:hover {
     color: #f1f1f1;
     opacity: 0.95;
 }
+
+/* ========================= */
+/* HERO SECTION MOBILE OPTIMIZED */
+/* ========================= */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        /* adjust height for smaller screens */
+        height: auto;
+    }
+
+    .hero-slide {
+        background-size: contain;
+        /* ensures full image is visible */
+        background-position: center top;
+        background-repeat: no-repeat;
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .hero-text {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        /* responsive text */
+        line-height: 1.3;
+        padding: 10px 20px;
+    }
+
+    .hero-text span {
+        font-size: clamp(1rem, 3.5vw, 1.4rem);
+    }
+
+    .hero-arrow {
+        font-size: 28px;
+        padding: 6px 8px;
+    }
+
+    .hero-controls {
+        gap: 8px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 50vh;
+        /* smaller height for phones */
+    }
+
+    .hero-slide {
+        background-size: contain;
+        /* full image always visible */
+        background-position: center top;
+        min-height: 50vh;
+    }
+
+    .hero-text {
+        font-size: clamp(1.4rem, 7vw, 2rem);
+        /* text scales down */
+        line-height: 1.2;
+        padding: 5px 10px;
+    }
+
+    .hero-text span {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+
+    .hero-arrow {
+        font-size: 24px;
+        padding: 5px 6px;
+    }
+
+    .hero-controls {
+        gap: 6px;
+        bottom: 15px;
+    }
+}
