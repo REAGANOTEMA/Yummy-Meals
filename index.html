@@ -4,232 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummy Meals</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Yummy Meals - Home</title>
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favricon.jpg" type="image/x-icon">
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#hero"><img src="images/logo.jpg" alt="Yummy Meals Logo"></a>
+                <a href="index.html"><img src="images/logo.jpg" alt="Yummy Meals Logo" width="120"></a>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span id="hamburger-icon">☰</span>
-            </button>
-
+            <button class="hamburger" id="hamburger">☰</button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="carousel">
-            <div class="hero-slide active" style="background-image:url('images/heroto.jpg')">
-                <div class="hero-text">Crispy Chicken & Golden Chips – Hot, Crunchy, Aromatic</div>
-            </div>
-            <div class="hero-slide" style="background-image:url('images/hero2.jpg')">
-                <div class="hero-text">Juicy Beef Meals – Tender, Flavorful, Satisfying</div>
-            </div>
-            <div class="hero-slide" style="background-image:url('images/hero3.jpg')">
-                <div class="hero-text">Authentic Ugandan Delicacies – Savory & Comforting</div>
-            </div>
-            <div class="hero-slide" style="background-image:url('images/hero4.jpg')">
-                <div class="hero-text">Breakfast Freshness – Morning Bliss in Every Bite</div>
-            </div>
-            <div class="hero-slide" style="background-image:url('images/herotic.jpg')">
-                <div class="hero-text">Yummy Moments with Friends – Share the Flavor, Share Happiness</div>
-            </div>
+        <div class="hero-slide active" style="background-image:url('images/heroto.jpg')">
+            <div class="hero-text">Crispy Chicken & Golden Chips – Hot, Crunchy, Aromatic</div>
+        </div>
+        <div class="hero-slide" style="background-image:url('images/hero2.jpg')">
+            <div class="hero-text">Juicy Beef Meals – Tender, Flavorful, Satisfying</div>
+        </div>
+        <div class="hero-slide" style="background-image:url('images/hero3.jpg')">
+            <div class="hero-text">Authentic Ugandan Delicacies – Savory & Comforting</div>
+        </div>
+        <div class="hero-slide" style="background-image:url('images/hero4.jpg')">
+            <div class="hero-text">Breakfast Freshness – Morning Bliss in Every Bite</div>
+        </div>
+        <div class="hero-slide" style="background-image:url('images/herotic.jpg')">
+            <div class="hero-text">Yummy Moments with Friends – Share the Flavor, Share Happiness</div>
+        </div>
+        <div class="hero-cta">
+            <a href="menu.html" class="btn shake" id="heroMenuBtn">View Our Menu</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section class="menu" id="menu">
-        <div class="menu-list">
-            <h2>Our Menu</h2>
-
-            <!-- Meals -->
-            <div class="category">
-                <h3>Meals</h3>
-                <div class="item">
-                    <img src="images/grilled-chicken.webp" alt="Grilled Chicken" class="dish-img animate-fade">
-                    <div class="meta">
-                        <strong>Grilled Chicken</strong> - UGX 15,000<br>
-                        Juicy, smoky chicken grilled to perfection. Aromatic herbs and spices make it irresistible!
-                    </div>
-                    <button onclick="orderNow('Grilled Chicken', 15000)">Order</button>
-                </div>
-                <div class="item">
-                    <img src="images/beef-burger.webp" alt="Beef Burger" class="dish-img animate-fade">
-                    <div class="meta">
-                        <strong>Beef Burger</strong> - UGX 12,000<br>
-                        Soft buns, perfectly seasoned beef, melted cheese & fresh veggies – mouthwatering!
-                    </div>
-                    <button onclick="orderNow('Beef Burger', 12000)">Order</button>
-                </div>
-                <div class="item">
-                    <img src="images/fried-fish.jpg" alt="Fried Fish" class="dish-img animate-fade">
-                    <div class="meta">
-                        <strong>Fried Fish</strong> - UGX 18,000<br>
-                        Crispy golden crust with tender, flaky fish inside. Perfectly seasoned and aromatic.
-                    </div>
-                    <button onclick="orderNow('Fried Fish', 18000)">Order</button>
-                </div>
-            </div>
-
-            <!-- Drinks -->
-            <div class="category">
-                <h3>Drinks</h3>
-                <div class="item">
-                    <img src="images/fresh-juice.webp" alt="Fresh Juice" class="dish-img animate-fade">
-                    <div class="meta">
-                        <strong>Fresh Juice</strong> - UGX 5,000<br>
-                        Refreshing natural juice made from the juiciest fruits. Sweet, tangy, and invigorating!
-                    </div>
-                    <button onclick="orderNow('Fresh Juice', 5000)">Order</button>
-                </div>
-                <div class="item">
-                    <img src="images/soda.webp" alt="Soda" class="dish-img animate-fade">
-                    <div class="meta">
-                        <strong>Soda</strong> - UGX 3,000<br>
-                        Chilled and bubbly, perfect to accompany any meal. Refreshment guaranteed!
-                    </div>
-                    <button onclick="orderNow('Soda', 3000)">Order</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Checkout Panel -->
-        <aside class="checkout" id="checkoutPanel">
-            <h3>Your Order</h3>
-            <div id="cartItems" class="cart-items"></div>
-            <div id="total" class="total">Total: UGX 0</div>
-
-            <label for="phone">Enter Mobile Money Number:</label>
-            <input type="text" id="phone" class="phone-input" placeholder="e.g. 0753727200">
-
-            <div class="pay-options">
-                <div id="n-mtn" class="network active" onclick="selectNetwork('MTN')">MTN</div>
-                <div id="n-airtel" class="network" onclick="selectNetwork('Airtel')">Airtel</div>
-            </div>
-
-            <button class="btn" onclick="checkout()">Pay with Mobile Money</button>
-        </aside>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-
-            <!-- CEO -->
-            <h2>CEO's Message</h2>
-            <div class="ceo animate-fade">
-                <img src="images/ceo.jpg" alt="CEO">
-                <p>
-                    Hello! I'm Isaiah Mubazi, CEO of Yummy Meals. Our mission is to serve authentic, delicious, and
-                    affordable meals with love. We focus on quality, taste, and customer satisfaction in every dish we
-                    prepare. From local delicacies to international favorites, we ensure every meal delivers joy,
-                    comfort, and a memorable experience. Join us and discover why our customers keep coming back for
-                    more flavorful moments shared with family and friends.
-                </p>
-            </div>
-
-            <!-- Head Chef -->
-            <h2>Meet Our Head Chef</h2>
-            <div class="chef animate-fade">
-                <img src="images/chef.jpg" alt="Head Chef">
-                <p>
-                    Our head chef combines traditional Ugandan spices with modern culinary techniques to create aromatic
-                    and savory dishes. Every meal is crafted with attention to flavor, texture, and presentation.
-                    Passionate about food and innovation, the chef ensures that each plate brings delight and leaves a
-                    lasting impression on your taste buds, making dining at Yummy Meals a unique and memorable
-                    experience.
-                </p>
-            </div>
-
-            <!-- Team -->
-            <h2>Our Amazing Team</h2>
-            <div class="workers">
-                <div class="worker animate-fade">
-                    <img src="images/waiter1.jpg" alt="Namatende Esther">
-                    <p><strong>Namatende Esther</strong><br>
-                        Bright and hardworking student at MUBS Jinja, Esther is committed to providing exceptional
-                        customer care. She ensures every guest feels welcome, comfortable, and valued. Her friendly
-                        attitude and attention to detail enhance the overall dining experience at Yummy Meals.</p>
-                </div>
-                <div class="worker animate-fade">
-                    <img src="images/waiter2.jpg" alt="Kawala Trust">
-                    <p><strong>Kawala Trust</strong><br>
-                        Dedicated and cheerful, Kawala brings positivity to every table she serves. She prioritizes
-                        timely
-                        service, customer satisfaction, and maintaining a warm, inviting atmosphere. Guests always leave
-                        with a smile thanks to her attentive care.</p>
-                </div>
-                <div class="worker animate-fade">
-                    <img src="images/chef-waiter.jpg" alt="Nakabiri Gloria Vanessa">
-                    <p><strong>Nakabiri Gloria Vanessa</strong><br>
-                        Talented chef and student, Gloria combines creativity with precision in the kitchen. Her dishes
-                        are flavorful, beautifully presented, and consistently enjoyed by customers, making her an
-                        invaluable member of our team.</p>
-                </div>
-            </div>
-
-            <!-- Customers -->
-            <h2>Our Happy Customers</h2>
-            <div class="testimonials">
-                <div class="testimonial animate-fade">
-                    <img src="images/customer1.jpg" alt="Customer 1">
-                    <p>
-                        "The meals at Yummy Meals are simply outstanding! Every dish is packed with flavor, freshness,
-                        and love. The staff is courteous, delivery is prompt, and the presentation is beautiful. From
-                        the first bite to the last, every experience is satisfying. I recommend this place to anyone
-                        seeking authentic and delicious meals served with care and a smile. It’s truly a memorable
-                        dining experience."
-                    </p>
-                </div>
-                <div class="testimonial animate-fade">
-                    <img src="images/customer2.jpg" alt="Customer 2">
-                    <p>
-                        "I love Yummy Meals! The grilled chicken is juicy, and the fresh juices are incredibly
-                        refreshing. Every order is prepared carefully, and paying through mobile money is simple and
-                        fast. The staff always ensures a great experience. Whether for a quick lunch or a full family
-                        meal, this is my go-to spot. Consistently delicious food and excellent service make Yummy Meals
-                        unbeatable."
-                    </p>
-                </div>
-            </div>
-
-            <!-- Delivery -->
-            <h2>We Deliver to Your Doorstep</h2>
-            <div class="delivery animate-fade">
-                <img src="images/delivery.jpg" alt="Delivery Service">
-                <p>
-                    Enjoy convenient delivery straight to your home or office. Fresh, hot, and perfectly prepared, our
-                    meals arrive in top condition, ensuring a delightful experience every time. We value speed,
-                    freshness, and customer satisfaction.
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.947797258616!2d33.2039!3d0.4629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177eb1e9d9eb0fbd%3A0x6b4ff85a0b1a08c!2sYummy%20Meals%20Cafe!5e0!3m2!1sen!2sug!4v1696212345678"
-                allowfullscreen></iframe>
-        </div>
-        <p>You can reach us via WhatsApp, Facebook, Instagram, TikTok, or YouTube below.</p>
+    <!-- Intro Section -->
+    <section class="intro container">
+        <h2>Welcome to Yummy Meals</h2>
+        <p>Experience authentic Ugandan flavors and international favorites, freshly prepared just for you. Explore our
+            menu and indulge in a variety of dishes for breakfast, lunch, snacks, and drinks. Your taste buds will thank
+            you!</p>
+        <a href="about.html" class="btn">Learn More About Us</a>
     </section>
 
     <!-- Footer -->
@@ -248,7 +74,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

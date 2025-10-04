@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Meals - Menu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favricon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.jpg" alt="Yummy Meals Logo" width="120"></a>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <div class="menu-list container">
+            <h2>Our Menu</h2>
+
+            <!-- Main Dishes -->
+            <div class="category">
+                <h3>Main Dishes</h3>
+                <div class="item">
+                    <img src="images/matoke.webp" alt="Matooke with Meat">
+                    <div class="meta"><strong>Matooke with Meat</strong> - UGX 8,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/rolex.jpeg" alt="Rolex">
+                    <div class="meta"><strong>Rolex (Chapati + Eggs)</strong> - UGX 3,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/rice.jpg" alt="Rice with Stew">
+                    <div class="meta"><strong>Rice with Stew</strong> - UGX 5,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/fish.png" alt="Grilled Fish">
+                    <div class="meta"><strong>Grilled Fish</strong> - UGX 10,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/sumosa.jpg" alt="Beef Samosas">
+                    <div class="meta"><strong>Beef Samosas</strong> - UGX 2,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Breakfast -->
+            <div class="category">
+                <h3>Breakfast</h3>
+                <div class="item">
+                    <img src="images/chapati-tea.jpg" alt="Chapati with Tea">
+                    <div class="meta"><strong>Chapati with Tea</strong> - UGX 2,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/mandazi.jpg" alt="Mandazi">
+                    <div class="meta"><strong>Mandazi</strong> - UGX 1,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/omelette.jpg" alt="Omelette">
+                    <div class="meta"><strong>Omelette</strong> - UGX 2,500</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/porridge.jpg" alt="Porridge">
+                    <div class="meta"><strong>Porridge</strong> - UGX 1,500</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Snacks -->
+            <div class="category">
+                <h3>Snacks</h3>
+                <div class="item">
+                    <img src="images/fried-cassava.webp" alt="Fried Cassava">
+                    <div class="meta"><strong>Fried Cassava</strong> - UGX 1,500</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/roasted-maize.jpg" alt="Roasted Maize">
+                    <div class="meta"><strong>Roasted Maize</strong> - UGX 1,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/fried-plantains.webp" alt="Fried Plantains">
+                    <div class="meta"><strong>Fried Plantains</strong> - UGX 2,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="category">
+                <h3>Drinks</h3>
+                <div class="item">
+                    <img src="images/juice.webp" alt="Juice">
+                    <div class="meta"><strong>Juice</strong> - UGX 3,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/soda.webp" alt="Soda">
+                    <div class="meta"><strong>Soda</strong> - UGX 2,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/water.jpeg" alt="Water">
+                    <div class="meta"><strong>Water</strong> - UGX 1,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Lunch / Fast -->
+            <div class="category">
+                <h3>Lunch / Fast</h3>
+                <div class="item">
+                    <img src="images/jollof-chicken.png" alt="Jollof Rice + Chicken">
+                    <div class="meta"><strong>Jollof (Rice + Chicken)</strong> - UGX 7,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/chips.webp" alt="Chips">
+                    <div class="meta"><strong>Chips</strong> - UGX 4,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/meat.webp" alt="Meat">
+                    <div class="meta"><strong>Meat</strong> - UGX 5,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/eggs.jpg" alt="Eggs">
+                    <div class="meta"><strong>Eggs</strong> - UGX 1,600</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/vegetable-rice.jpg" alt="Vegetable Rice">
+                    <div class="meta"><strong>Vegetable Rice</strong> - UGX 3,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/chips-chapati-meat.jpg" alt="Chips, Chapati & Meat">
+                    <div class="meta"><strong>Chips + Chapati + Meat</strong> - UGX 6,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+                <div class="item">
+                    <img src="images/chips-chapati-rice-meat.jpg" alt="Chips, Chapati, Rice & Meat">
+                    <div class="meta"><strong>Chips + Chapati + Rice + Meat</strong> - UGX 8,000</div>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://wa.me/256753727200" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:yummymeals15@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.facebook.com/YummyMealsUg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/YummyMealsUg" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@YummyMealsUg" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@Campusclip-w3n" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>Designed & Managed by <a href="https://wa.me/256772514889" target="_blank">Reagan Otema</a> | &copy; 2025
+                Yummy Meals</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="scripts/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+:root {
+    --primary-red: #A80F15;
+    --accent-yellow: #FFC246;
+    --dark: #2B2B2B;
+    --muted: #fdf6f4;
+    --radius: 16px;
+    --max-width: 1200px;
+    --font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--muted);
+    color: var(--dark);
+    font-family: var(--font-family);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Container */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 18px;
+}
+
+/* Navbar */
+header {
+    padding: 16px 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: var(--primary-red);
+    color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-shadow: 3px 3px 14px rgba(0, 0, 0, 0.7);
+}
+
+/* Contact Section */
+.contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.contact p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: var(--radius);
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card i {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.contact-card a {
+    font-weight: 600;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 32px;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, var(--primary-red), var(--accent-yellow));
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-red);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+}
+
+footer .footer-content {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+footer .socials {
+    display: flex;
+    gap: 20px;
+}
+
+footer .socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    color: var(--primary-red);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+footer .socials a:hover {
+    background: var(--accent-yellow);
+    transform: scale(1.1);
+}
+
+footer p a {
+    color: #fff;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+footer p a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #fff;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        gap: 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text {
+        font-size: 28px;
+        padding: 0 12px;
+    }
+}
+
+/* ========================= */
+/* Hero Section (Full Screen) */
+/* ========================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Slides */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* Cover entire area */
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+/* Active slide */
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Overlay for text readability */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    /* Slight dark overlay */
+    z-index: 0;
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    text-shadow: 3px 3px 18px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    max-width: 90%;
+}
+
+.hero-text span {
+    display: block;
+    margin-top: 12px;
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: 400;
+    color: #f1f1f1;
+    opacity: 0.95;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 28px;
+        padding: 0 12px;
+    }
+
+    .hero-text span {
+        font-size: 16px;
+    }
+}

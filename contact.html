@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Meals - Contact</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favricon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo size consistent with index.css -->
+                <a href="index.html"><img src="images/logo.jpg" alt="Yummy Meals Logo" width="70" height="70"></a>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 50vh; background-image:url('images/kitchen1.jpg');">
+        <div class="hero-text" style="font-size:36px; color:#fff; text-shadow: 3px 3px 14px rgba(0,0,0,0.7);">
+            Get in Touch with Us
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact container" style="padding: 60px 18px;">
+        <h2>Contact Yummy Meals</h2>
+        <p>We’d love to hear from you! Reach out for orders, feedback, or inquiries.</p>
+
+        <div class="contact-details" style="display:flex; flex-wrap:wrap; gap:40px; margin-top:40px;">
+
+        </div>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps?q=Makerere+University+Business+School+Jinja+Branch+Nalufenya+Hospital&output=embed"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p>You can reach us via WhatsApp, Facebook, Instagram, TikTok, or YouTube below.</p>
+        </section>
+        <!-- Contact Form -->
+        <div class="contact-form" style="margin-top:50px;">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+                <div class="form-row" style="display:flex; flex-wrap:wrap; gap:20px; margin-bottom:20px;">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-main"
+                    style="background: linear-gradient(45deg, #A80F15, #FFC246); color:#fff;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://wa.me/256753727200" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:yummymeals15@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.facebook.com/YummyMealsUg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/YummyMealsUg" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@YummyMealsUg" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@Campusclip-w3n" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>Designed & Managed by <a href="https://wa.me/256772514889" target="_blank">Reagan Otema</a> | &copy; 2025
+                Yummy Meals</p>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>
