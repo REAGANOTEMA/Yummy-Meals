@@ -1070,3 +1070,160 @@ footer .footer-content .socials a:hover {
         bottom: 15px;
     }
 }
+
+/* ========================= */
+/* HERO SECTION STYLING */
+/* ========================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 12px 20px;
+    border-radius: 12px;
+    animation: fadeUp 1s ease-in-out;
+}
+
+.hero-text span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 8px;
+    color: #eee;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVENESS */
+/* ========================= */
+@media (max-width: 768px) {
+    .hero-slide {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        min-height: 65vh;
+        height: auto;
+    }
+
+    .hero-text {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+        padding: 10px 14px;
+        bottom: 15%;
+    }
+
+    .hero-text span {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slide {
+        min-height: 55vh;
+    }
+
+    .hero-text {
+        font-size: clamp(1.2rem, 7vw, 1.6rem);
+        padding: 8px 12px;
+        bottom: 12%;
+    }
+
+    .hero-text span {
+        font-size: clamp(0.9rem, 4vw, 1rem);
+    }
+}
+
+/* ========================= */
+/* NAVBAR MOBILE MENU */
+/* ========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
