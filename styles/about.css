@@ -1382,3 +1382,94 @@ img {
         padding: 8px 12px;
     }
 }
+
+/* ========================= */
+/* FOOTER FINAL POLISH       */
+/* ========================= */
+footer {
+    background: var(--primary-red);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-content {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-content h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+footer .footer-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+footer .footer-content .socials {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .footer-content .socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    color: var(--primary-red);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer .footer-content .socials a:hover {
+    background: var(--accent-yellow);
+    color: var(--primary-red);
+    transform: scale(1.1);
+}
+
+/* Footer bottom note */
+footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 12px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    footer {
+        padding: 30px 15px;
+    }
+
+    footer .footer-content h3 {
+        font-size: 1.3rem;
+    }
+
+    footer .footer-content p {
+        font-size: 0.95rem;
+    }
+
+    footer .footer-content .socials a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
